@@ -1,0 +1,159 @@
+
+
+<ion-header >
+
+  <ion-navbar style="background-image: url('assets/poster/bgs.png');background-color: black">
+    <ion-label style="font-size: 18px;color:gold;margin-right: 0px!important;" text-center>首页</ion-label>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page" style="background-color:rgb(249,249,251)">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+         <ion-refresher-content
+           pullingIcon="arrow-dropdown"
+           pullingText="刷新..."
+          refreshingSpinner="circles"
+           refreshingText="正在刷新...">
+         </ion-refresher-content>
+       </ion-refresher>
+
+<div class="picbox">
+  <ion-slides [pager]="true" [autoplay]="3600" [loop]="true">
+    <ion-slide>
+      <img src="assets/newUI/hp.png" style="width: 100%;height: 100%">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/poster/paper4.jpg" style="width: 100%;height: 100%">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/poster/paper5.jpg" style="width: 100%;height: 100%">
+    </ion-slide>
+  </ion-slides>
+</div>
+
+  <div class="contenttitle">
+    <!--<div class="title">-->
+       <!--失物招领-->
+    <!--</div>-->
+    <!--<div class="mimtitle">-->
+      <!--The lost and found-->
+    <!--</div>-->
+    <img src="assets/newUI/myfff.png" style="transform: scale(0.7);margin-left: -46px">
+  </div>
+
+  <div class="lostcontent">
+
+    <div class="left" >
+      <div *ngFor="let item of lostone">
+
+      <div class="b1" (tap)="goComment(item._id)">
+        <img  *ngIf="item.imgurl!=''" src="{{item.imgurl}}">
+        <div class="tag">{{item.title}}</div>
+        <div class="content">
+           {{item.content}}
+        </div>
+        <div class="time">
+          <div>
+            <img src="assets/newUI/time.png">
+          </div>
+
+         <div style="position:relative;top:50%;margin-top: 3px;font-size: 8px;margin-left: 6px;">{{item.createdtime}}</div>
+        </div>
+        <div class="comment">
+          <div style="margin-top: 4px;font-size: 14px;margin-left: 12px">
+            {{item.nickname}}
+          </div>
+          <div style="margin-left: 60px;margin-top: 2px">
+            <img src="assets/newUI/mycomment.png" (click)="goComment(item._id)">
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="left" >
+      <div *ngFor="let item of losttwo">
+
+        <div class="b1" (tap)="goComment(item._id)">
+          <img *ngIf="item.imgurl!=''" src="{{item.imgurl}}">
+          <div class="tag">{{item.title}}</div>
+          <div class="content">
+            {{item.content}}
+          </div>
+          <div class="time">
+            <div>
+              <img src="assets/newUI/time.png">
+            </div>
+            <div style=";margin-top: 8px;font-size: 8px;margin-left: 6px">{{item.createdtime}}</div>
+          </div>
+          <div class="comment">
+            <div style="margin-top: 4px;font-size: 14px;margin-left: 12px">
+              {{item.nickname}}
+            </div>
+            <div style="margin-left: 60px">
+              <img src="assets/newUI/mycomment.png" (click)="goComment(item._id)">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <ion-label text-right style="margin: 0px;"><button ion-button style="height: 30px;margin-right: 5%;" [outline]="true" color="madetop" (click)="goMoreFoLost()">更 多</button></ion-label>
+
+    <img src="assets/newUI/shoye.png">
+  <div>
+    <img src="assets/newUI/active.png" style="width: 50%">
+  </div>
+
+
+  <div class="active">
+
+
+    <div class="left">
+      <div *ngFor="let item of actone">
+      <div class="b1" (tap)="goActInfo(item._id)">
+        <img src="{{item.imgurl}}">
+        <div class="content">
+          <p style="margin-bottom: 4px;margin-top: 0px;color: rgba(120,120,120,0.8)">{{item.title}}</p>
+          {{item.content}}
+        </div>
+        <div class="foot">
+        <img src="assets/newUI/moreinfo.png" (click)="goActInfo(item._id)">
+        </div>
+      </div>
+
+      </div>
+
+    </div>
+
+    <div class="left">
+
+      <div *ngFor="let item of acttwo">
+        <div class="b1" (tap)="goActInfo(item._id)">
+          <img src="{{item.imgurl}}">
+          <div class="content">
+            <p style="margin-bottom: 4px;margin-top: 0px;color: rgba(120,120,120,0.8)">{{item.title}}</p>
+            {{item.content}}
+          </div>
+          <div class="foot">
+            <img src="assets/newUI/moreinfo.png" (click)="goActInfo(item._id)">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <ion-label text-right style="margin: 0px;"><button ion-button style="height: 30px;margin-right: 5%;" [outline]="true" color="madetop" (click)="goMoreAct()">更 多</button></ion-label>
+
+
+
+
+
+</ion-content>

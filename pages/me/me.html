@@ -1,0 +1,227 @@
+<!--
+  Generated template for the MePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+
+  <ion-navbar [hideBackButton]="true" style="background-image: url('assets/poster/bgs.png');">
+    <!--<img src="assets/newUI/back2.png">-->
+
+    <div style="display: flex" >
+      <div style="padding: 5px;width: 14%">
+        <!--<img class="back" src="assets/newUI/back3.png" style="width: 32px;height: 32px" (click)="back()">-->
+      </div>
+      <div style="width: 72%">
+        <!--<ion-label *ngIf="!flag">失物招领</ion-label>-->
+
+        <ion-label text-center style="color: gold;font-size: 18px;margin-right: 0px!important;" >我的</ion-label>
+      </div>
+      <div  style="padding: 5px;width: 14%" class="btnsearch" (click)="toset()">
+        <img src="assets/newUI/settingme.png">
+      </div>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+
+  <div class="headbox">
+    <div class="head1"></div>
+    <div class="headface">
+
+          <div style="margin-bottom: 8px">
+            <img src="{{headface}}" (click)="changeHeaderFace()">
+            <ion-label style="margin-bottom: 12px" text-center>{{nickname}}</ion-label>
+          </div>
+    </div>
+    <div class="headselect">
+
+      <div class="select1" (click)="getnotice()">
+         <img src="assets/menuicon/note.png">
+      </div>
+      <div class="select2" (click)="goActivetj()">
+        <img src="assets/newUI/tj2.png">
+      </div>
+
+      <div class="select3" (click)="goMyAction()">
+        <img src="assets/menuicon/timer.png">
+      </div>
+    </div>
+
+    <!--<div class="headfooter">-->
+      <!--<div class="footer1">-->
+        <!--<ion-label text-center>Following 16980</ion-label>-->
+      <!--</div>-->
+      <!--<div class="footer2">-->
+        <!--<ion-label text-center>Follower 1880</ion-label>-->
+      <!--</div>-->
+    <!--</div>-->
+
+
+    <div class="info">
+      <div class="b1">
+        <ion-label text-center style="margin-bottom: 0px!important;">帖子</ion-label>
+        <ion-label text-center style="margin-top: 2px!important;">2</ion-label>
+      </div>
+      <div class="b2">
+
+        <ion-label text-center style="margin-bottom: 0px!important;">活动</ion-label>
+        <ion-label text-center style="margin-top: 2px!important;">1</ion-label>
+
+      </div>
+      <div class="b3">
+
+        <ion-label text-center style="margin-bottom: 0px!important;">表白</ion-label>
+        <ion-label text-center style="margin-top: 2px!important;">3</ion-label>
+      </div>
+    </div>
+  </div>
+
+  <ion-segment   class="SwipedTabs-tabs" style="background-color: black;"  >
+    <ion-segment-button *ngFor='let tab of tabs ; let i = index ' value="IngoreMe" (click)="selectTab(i)"
+                        [ngClass]='{ "SwipedTabs-activeTab" : ( this.SwipedTabsSlider  && ( this.SwipedTabsSlider.getActiveIndex() === i || (  tabs.length -1 === i&& this.SwipedTabsSlider.isEnd()))) }' >
+      <ion-icon name="{{tab}}"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- here is our dynamic line  "indicator"-->
+  <div id='indicator' class="SwipedTabs-indicatorSegment" [ngStyle]="{'width.%': (100/this.tabs.length)}"></div>
+
+  <ion-slides #SwipedTabsSlider  (ionSlideDrag)="animateIndicator($event)"
+              (ionSlideWillChange)="updateIndicatorPosition()"
+              (ionSlideDidChange)="updateIndicatorPosition()"
+              (pan)="updateIndicatorPosition()"
+              [pager]="false"
+  >
+    <ion-slide>
+
+      <div class="photobox">
+        <img src="assets/poster/paper1.jpg" imageViewer>
+        <img class="center" src="assets/poster/paper2.jpg" imageViewer>
+        <img src="assets/poster/paper3.jpg" imageViewer="assets/poster/paper4.jpg">
+      </div>
+
+      <div class="photobox">
+        <img src="assets/poster/paper4.jpg">
+        <img class="center" src="assets/poster/paper5.jpg">
+        <img src="assets/poster/paper6.jpg">
+      </div>
+      <div class="photobox">
+        <img src="assets/poster/paper7.jpg">
+        <img src="assets/poster/poster1.jpg">
+      </div>
+    </ion-slide>
+    <ion-slide>
+
+      <!--这里下行用户发布的东西-->
+
+      <div *ngFor="let item of userActive">
+
+        <ion-card class="userlove">
+          <ion-card-header>
+            <img src="{{item.userHeadface}}">
+            <ion-label>user1</ion-label>
+            <img (click)="cofigDeleteAction(item._id)" class="delete" src="assets/newUI/deletemore.png"  >
+          </ion-card-header>
+          <ion-card-content style="text-align: left!important;">
+           {{item.title}}
+          </ion-card-content>
+        </ion-card>
+
+      </div>
+
+    </ion-slide>
+    <ion-slide>
+
+      <div *ngFor="let item of userLosting">
+
+        <ion-card class="userlove">
+          <ion-card-header>
+            <img src="{{item.userHeadface}}">
+            <ion-label>user1</ion-label>
+            <img (click)="cofigDeleteLosting(item._id)" class="delete" src="assets/newUI/deletemore.png"  >
+          </ion-card-header>
+          <ion-card-content style="text-align: left!important;">
+            {{item.content}}
+          </ion-card-content>
+        </ion-card>
+
+      </div>
+
+
+
+    </ion-slide>
+  </ion-slides>
+
+
+  <!--<ion-list class="btnlist" >-->
+
+    <!--<button ion-item (click)="goselectTheme()">-->
+      <!--<img src="assets/menuicon/theme.png" item-left>-->
+      <!--<ion-label >主题</ion-label>-->
+    <!--</button>-->
+
+    <!--<button ion-item>-->
+      <!--<img src="assets/menuicon/share.png" item-left>-->
+      <!--<ion-label >分享这个App</ion-label>-->
+    <!--</button>-->
+
+    <!--<ion-item>-->
+      <!--<img src="assets/menuicon/night.png" item-left>-->
+      <!--<ion-label >夜间模式</ion-label>-->
+      <!--<ion-toggle [checked]="theme" (ionChange)="changeTheme()"> </ion-toggle>-->
+    <!--</ion-item>-->
+
+  <!--</ion-list>-->
+
+  <!--<ion-list class="settinglist">-->
+    <!--<button ion-item (click)="goSetting()">-->
+      <!--<img src="assets/menuicon/setting.png" item-left>-->
+      <!--<ion-label>设置</ion-label>-->
+
+    <!--</button>-->
+  <!--</ion-list>-->
+
+    <!--<button ion-button round style="width: 80%;left: 50%;margin-left: -40%" color="primary" (click)="logout()" >退出登录</button>-->
+
+  <!--<super-tabs>-->
+    <!--<super-tab [root]="page1" icon="ios-apps"></super-tab>-->
+    <!--<super-tab [root]="page2" icon="md-calendar"></super-tab>-->
+    <!--<super-tab [root]="page3" icon="ios-browsers"></super-tab>-->
+    <!--<super-tab [root]="page3" icon="ios-camera"></super-tab>-->
+  <!--</super-tabs>-->
+
+  <!--<ion-segment  class="SwipedTabs-tabs"  >-->
+    <!--<ion-segment-button *ngFor='let tab of tabs ; let i = index ' value="IngoreMe" (click)="selectTab(i)"-->
+                        <!--[ngClass]='{ "SwipedTabs-activeTab" : ( this.SwipedTabsSlider  && ( this.SwipedTabsSlider.getActiveIndex() === i || (  tabs.length -1 === i&& this.SwipedTabsSlider.isEnd()))) }' >-->
+      <!--<ion-icon name="{{tab}}"></ion-icon>-->
+    <!--</ion-segment-button>-->
+  <!--</ion-segment>-->
+
+  <!--&lt;!&ndash; here is our dynamic line  "indicator"&ndash;&gt;-->
+  <!--<div id='indicator' class="SwipedTabs-indicatorSegment" [ngStyle]="{'width.%': (100/this.tabs.length)}"></div>-->
+
+  <!--<ion-slides #SwipedTabsSlider  (ionSlideDrag)="animateIndicator($event)"-->
+              <!--(ionSlideWillChange)="updateIndicatorPosition()"-->
+              <!--(ionSlideDidChange)="updateIndicatorPosition()"-->
+              <!--(pan)="updateIndicatorPosition()"-->
+              <!--[pager]="false"-->
+  <!--&gt;-->
+    <!--<ion-slide>-->
+      <!--<h1>Page 1 </h1>-->
+    <!--</ion-slide>-->
+    <!--<ion-slide>-->
+      <!--<h1>Page 2 </h1>-->
+    <!--</ion-slide>-->
+    <!--<ion-slide>-->
+      <!--<h1>Page 3 </h1>-->
+    <!--</ion-slide>-->
+    <!--<ion-slide>-->
+      <!--<h1>Page 4 </h1>-->
+    <!--</ion-slide>-->
+  <!--</ion-slides>-->
+
+
+</ion-content>

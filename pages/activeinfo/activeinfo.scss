@@ -1,0 +1,175 @@
+page-activeinfo {
+
+  ion-input, ion-textarea{
+
+    width: 100%;
+    position: relative;
+
+    color: white!important;
+
+
+  }
+
+  ion-header{
+
+    background-color: black;
+
+    img:last-child{
+      width: 32px;
+      height: 32px;
+      position: relative;
+      left: 50%;
+      margin-left: -16px;
+
+
+    }
+  }
+
+  ion-content{
+
+    ion-slides{
+
+      height: 35%;
+    }
+
+
+  }
+  .title{
+
+
+    font-size:20px;
+    margin-right: 0px;
+
+
+  }
+
+  .toolbar-background-md{
+
+    background-color: rgba(0,0,0,0);
+
+  }
+
+  .contentbox{
+
+    width: 100%;
+    padding: 5px;
+    height: 200px;
+
+    img{
+
+      width:45%;
+      top: -160px;
+      height: 140px;
+      position: relative;
+      z-index: 2;
+
+
+    }
+
+    .content{
+
+      position: relative;
+      padding-top: 20px;
+      width: 65%;
+      height: 180px;
+      background-color: white;
+      left: 50%;
+      margin-left: -16%;
+      box-shadow: 0px 1px 8px 0.5px gainsboro;
+
+    }
+
+    .mainbox{
+      padding-left: 20%;
+      ion-label {
+        margin-top: 0px;
+        margin-bottom: 4px;
+
+
+      }
+
+      button{
+
+        padding-top: 2px;
+        padding-bottom: 2px;
+        margin-left: 58%;
+        margin-top: -5px;
+      }
+
+
+    }
+
+  }
+
+
+
+  .contentboxright{
+
+    width: 100%;
+    padding: 5px;
+    height: 200px;
+
+    img{
+
+      width:45%;
+      top: -160px;
+      height: 140px;
+      position: relative;
+      z-index: 2;
+      left: 100%;
+      margin-left: -45%;
+
+
+    }
+
+    .content{
+
+      position: relative;
+      padding-top: 20px;
+      width: 65%;
+      height: 180px;
+      background-color: white;
+      padding-left: 8px;
+      ;
+      box-shadow: 0px 1px 8px 0.5px gainsboro;
+
+    }
+
+    .mainbox{
+      padding-right: 18%;
+      ion-label {
+        margin-top: 0px;
+        margin-bottom: 4px;
+        margin-right: 0px;
+      }
+
+      button{
+        margin-top: -5px!important;
+        padding-top: 2px!important;
+        padding-bottom: 2px!important;
+        margin-left: 58%;
+      }
+
+
+    }
+
+  }
+
+  .button-md{
+
+
+    height: 30px;
+  }
+
+  .btnsearch:active{
+
+    opacity: 0.8;
+  }
+
+  .back:active{
+
+    opacity: 0.8;
+  }
+
+
+}

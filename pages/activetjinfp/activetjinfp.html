@@ -1,0 +1,115 @@
+<!--
+  Generated template for the ActivetjinfpPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>activetjinfp</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card>
+    <ion-card-header>
+      {{activetitle}}
+    </ion-card-header>
+    <ion-card-content>
+     {{actcontent}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <div class="headerbox">
+      <div class="d1">
+       <ion-label text-center>限制人数</ion-label>
+      </div>
+      <div class="d2">
+        <ion-label text-center>已报名</ion-label>
+      </div>
+    </div>
+      <div class="mycontent">
+        <div class="c1">
+         <ion-label text-center>{{max}}</ion-label>
+      </div>
+        <div class="c2">
+          <ion-label text-center >{{joinnum}}</ion-label>
+        </div>
+      </div>
+  </ion-card>
+
+
+  <ion-card>
+    <div class="classfyboy">
+      <div class="boy" >
+       <ion-label>男</ion-label>
+      </div>
+
+      <div class="sum" #boy>
+
+      </div>{{boynum}}人
+
+    </div>
+
+    <div class="classfygril">
+
+      <div class="gril">
+        <ion-label>女</ion-label>
+      </div>
+
+      <div class="sum" #gril>
+
+      </div>{{grilnum}}人
+    </div>
+  </ion-card>
+
+  <ion-label class="person" text-center>已经报名</ion-label>
+
+
+  <div *ngFor="let item of activeTj">
+  <ion-card>
+    <div class="ebox">
+      <div class="e1">
+        <img src="{{item.userHeadface}}">
+      </div>
+      <div class="e2">
+       <ion-label>{{item.nickname}}</ion-label>
+      </div>
+    </div>
+  </ion-card>
+
+  </div>
+
+  <!--<ion-card>-->
+    <!--<div class="ebox">-->
+      <!--<div class="e1">-->
+        <!--<img src="assets/userface/user2.jpg">-->
+      <!--</div>-->
+      <!--<div class="e2"></div>-->
+    <!--</div>-->
+  <!--</ion-card>-->
+
+  <!--<ion-card>-->
+    <!--<div class="ebox">-->
+      <!--<div class="e1">-->
+        <!--<img src="assets/userface/user3.jpg">-->
+      <!--</div>-->
+      <!--<div class="e2"></div>-->
+    <!--</div>-->
+  <!--</ion-card>-->
+
+  <!--<ion-card>-->
+    <!--<div class="ebox">-->
+      <!--<div class="e1">-->
+        <!--<img src="assets/userface/user4.jpg">-->
+      <!--</div>-->
+      <!--<div class="e2"></div>-->
+    <!--</div>-->
+  <!--</ion-card>-->
+
+</ion-content>

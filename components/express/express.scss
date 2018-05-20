@@ -1,0 +1,83 @@
+express {
+
+  .mycc{
+
+
+    height:70px ;
+    width: 70px;
+    border-radius: 50%;
+    background-color: gold;
+    overflow: hidden;
+    position: relative;
+    top: 50%;
+    margin-left: -70px;
+    margin-top: -35px;
+    opacity: 0.8;
+  }
+
+  .title{
+
+
+    font-size: 20px;
+    position: relative;
+    top: -48%;
+    margin-top: 0px;
+    margin-left: 10%;
+    color: grey;
+
+
+  }
+
+  .time{
+
+    background-color: #387ef5;
+    width: 120px;
+    ;
+    position: relative;
+    left: 100%;
+    margin-left: -100px;
+    top: -50%;
+
+  }
+
+  .card-content-md{
+
+    width: 90%;
+    background-color: white;
+    margin-left: 5%;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    z-index: -1;
+    padding-bottom: 10px;
+  }
+
+  .card-md{
+
+    box-shadow: none;
+    background-color: rgba(0,0,0,0);
+
+  }
+
+  .card-header-md{
+
+    background-color: white;
+    box-shadow: 1px 1px 6px 0.5px gainsboro;
+    z-index: 4;
+    border-bottom: 0.5px solid rgba(224,224,224,0.5);
+  }
+  .mybox{
+    max-height: 0px;
+    opacity: 1;
+
+  }
+
+  .contentbox{
+    opacity: 0;
+  }
+
+
+  .card-header-md{
+    height: 80px;
+    border-radius: 8px;
+  }
+}

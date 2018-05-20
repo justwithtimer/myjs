@@ -1,0 +1,196 @@
+page-contact {
+
+
+  .card-ios{
+    margin: 0px!important;
+    width: 100%!important;
+  }
+
+  .card-content-ios{
+
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+  }
+
+
+  ion-content{
+
+    background-color: #f4f4f4 !important;
+  }
+
+.classfy{
+
+  margin-top: 20px;
+  width: 100%;
+  height: 30%;
+  margin-bottom: 20px;
+
+  .box1{
+
+    display: flex;
+    width: 100%;
+    height:50%;
+    margin-bottom: 10px;
+
+    .select1{
+
+      border-radius: 5px;
+      margin-left: 4%;
+      background-color: white;
+      width: 45%;
+      display: flex;
+      box-shadow: #A9A9A9 0.2px 0.2px 0.2px 0.2px;
+
+      img{
+        margin-top: 10px;
+        width: 50px;
+        height: 50px;
+
+
+      }
+
+      ion-label{
+
+        font-size: 28px;
+        color: #999999;
+        margin-top: 20px;
+        margin-left: 5px;
+
+      }
+
+    }
+
+
+    .select2{
+      border-radius: 8px;
+      margin-left: 2%;
+      background-color: white;
+      width: 45%;
+      display: flex;
+      box-shadow: #A9A9A9 0.2px 0.2px 0.2px 0.2px ;
+
+
+      img{
+        width: 50px;
+        height: 50px;
+        margin-top: 20px;
+
+      }
+
+      ion-label{
+
+        font-size: 28px;
+        color: #999999;
+        margin-top: 20px;
+        margin-left: 5px;
+
+      }
+
+    }
+
+  }
+}
+
+
+  .mycardtitle{
+
+    display: flex;
+    img{
+
+      width: 30px;
+      height: 30px;
+    }
+    ion-label{
+      font-size: 20px;
+      color: #6495ED;
+      margin: 0px;
+      margin-left: 10px;
+
+    }
+
+  }
+
+  .postersliders{
+
+    .myposter {
+
+      padding-right: 15px;
+      img {
+
+        margin-left: 10px;
+        border-radius: 5px;
+
+        width: 100%;
+        height: 200px;
+        margin-right: 0px !important;
+      }
+      .card-title{
+
+        position: absolute;
+        top: 36%;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+
+      }
+
+      .card-subtitle{
+
+        margin-top: 10px;
+        font-size: 1.0em;
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        color: #fff;
+
+      }
+
+    }
+
+
+  }
+
+  .paper{
+
+
+    .posterbox{
+
+      padding: 5px;
+
+      img{
+        border-radius: 10px;
+      }
+
+
+
+    }
+
+
+    .card-title{
+
+      position: absolute;
+      top: 36%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+
+    }
+
+    .card-subtitle{
+
+      margin-top: 10px;
+      font-size: 1.0em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #fff;
+
+    }
+
+
+  }
+
+
+}

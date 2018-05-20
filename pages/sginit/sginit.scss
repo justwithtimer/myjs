@@ -1,0 +1,35 @@
+page-sginit {
+
+  .item-ios{
+
+
+    background-color: rgba(255,255,255,0.9);
+
+  }
+
+
+
+  .logininfo{
+
+    margin-top: 85%;
+
+    ion-item{
+
+      margin-top: 8px;
+      width: 80%;
+      left: 50%;
+      margin-left: -40%;
+      img{
+
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .item-ios [item-right], .item-ios [item-end]{
+
+    margin: 0px!important;
+  }
+
+}

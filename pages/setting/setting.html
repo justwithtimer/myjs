@@ -1,0 +1,82 @@
+<!--
+  Generated template for the SettingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+
+  <ion-navbar [hideBackButton]="true" style="background-image: url('assets/poster/bgs.png');">
+    <!--<img src="assets/newUI/back2.png">-->
+
+    <div style="display: flex" >
+      <div style="padding: 5px;width: 14%">
+        <img class="back" src="assets/newUI/back3.png" style="width: 32px;height: 32px" (click)="back()">
+      </div>
+      <div style="width: 72%">
+        <!--<ion-label *ngIf="!flag">失物招领</ion-label>-->
+
+        <ion-label text-center style="color: gold;font-size: 18px;margin-right: 0px!important;" >设置</ion-label>
+      </div>
+      <div  style="padding: 5px;width: 14%" class="btnsearch">
+        <!--<img src="assets/newUI/settingme.png">-->
+      </div>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      通 用
+    </ion-list-header>
+    <ion-item>
+      <ion-icon name="notifications" item-start style="color: #FFA500"></ion-icon>
+      <ion-label item-left >推送</ion-label>
+      <ion-toggle></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="finger-print" item-start style="color: #f53d3d"></ion-icon>
+      <ion-label item-left >指纹登录</ion-label>
+      <ion-toggle></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="key" item-start style="color: brown"></ion-icon>
+      <ion-label item-left >隐私模式</ion-label>
+      <ion-toggle></ion-toggle>
+    </ion-item>
+
+    <ion-list-header>
+      更多
+    </ion-list-header>
+    <button ion-item>
+      <ion-icon name="mail" item-start style="color: #FFA500"></ion-icon>
+      <ion-label item-left >意见反馈</ion-label>
+    </button>
+
+    <button ion-item>
+    <ion-icon name="information-circle" item-start style="color: darkorchid"></ion-icon>
+    <ion-label item-left >我的通知</ion-label>
+  </button>
+
+    <button ion-item>
+      <ion-icon name="people" item-start style="color: #f53d3d"></ion-icon>
+      <ion-label item-left >关于我们</ion-label>
+    </button>
+
+
+    <button ion-item>
+      <ion-icon name="link" item-start style="color: deeppink"></ion-icon>
+      <ion-label item-left >更多动态</ion-label>
+    </button>
+
+
+
+  </ion-list>
+
+
+  <button style="width: 80%;margin-left: 10%" ion-button [round]="true" (click)="logout()" text-center>退出登录</button>
+
+</ion-content>

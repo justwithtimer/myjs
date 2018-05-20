@@ -1,0 +1,299 @@
+page-about {
+
+
+
+  ion-input, ion-textarea{
+
+    width: 100%;
+    position: relative;
+
+    color: white!important;
+
+
+  }
+
+  ion-header{
+
+    background-color: black;
+
+    img:last-child{
+      width: 32px;
+      height: 32px;
+      position: relative;
+      left: 50%;
+      margin-left: -16px;
+
+
+    }
+  }
+
+  .toolbar-md{
+
+    padding-bottom: 0px;
+  }
+
+  .toolbar-background-md{
+
+    background-color: rgba(0,0,0,0);
+
+  }
+
+
+
+
+  .header{
+
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0,0,0,0);
+
+    img{
+
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      position: absolute;
+      left: 86%;
+      margin-top: 5px;
+    }
+
+  }
+
+  .box{
+
+    width: 120px;
+    height: 120px;
+    background: linear-gradient( rgba(127,244,195,0.8),rgba(180,198,178,0.6));
+    border-radius: 10px;
+
+    .delete{
+
+      width: 35px;
+      height: 35px;
+      background-color: red;
+      border-radius: 50%;
+      margin-top: -18px;
+      position: absolute;
+     margin-left: 100px;
+      opacity: 0.3;
+
+    }
+
+  }
+
+
+  .picbox{
+
+    //background-color: yellow;
+    height: 40%;
+
+  }
+
+  .contenttitle{
+
+    width: 100%;
+    height: 50px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+
+  .title{
+
+    padding-top: 10px;
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+    display: inline-block;
+    margin-left: 15%;
+    font-size: 20px;
+
+    }
+
+    .mimtitle{
+
+      width: auto;
+      padding-top: 12px;
+      padding-bottom: -10px;
+      display: inline-block;
+      font-size: 16px;
+      border-bottom: 1px #fbde1e solid;
+
+
+    }
+
+
+  }
+.lostcontent{
+
+  width: 100%;
+  //background-color: gold;
+
+  display: flex;
+  padding-top: 6px;
+
+  .left{
+
+    width: 48%;
+    margin-left: 1%;
+    height:auto;
+    padding-bottom: 10px;
+    //background-color: yellowgreen;
+    margin-right: 1%;
+
+    .b1{
+
+      padding-top: 4px;
+      box-shadow: 0px 1px 2px 0.2px grey;
+      width: 100%;
+      height: auto;
+      margin-bottom: 8px;
+      //background-color: palevioletred;
+      padding-bottom: 10px;
+
+
+      .tag{
+
+        margin-top: 4px;
+        text-align: center;
+        margin-left: 10px;
+        border-radius: 8px;
+        padding: 4px;
+        max-width: 60px;
+
+        background-color: gold;
+      }
+
+
+      .content{
+        width: 100%;
+        background-color: white;
+        text-align: left;
+        max-height: 100px;
+        overflow: scroll;
+        padding: 8px;
+      }
+
+      img{
+
+        width: 100%;
+
+      }
+
+      .time{
+
+        padding-left: 12px;
+        display: flex;
+        img{
+          width: 20px;
+          height: 20px;
+
+        }
+
+      }
+      .comment{
+
+        display: flex;
+
+        img{
+          width: 20px;
+          height: 20px;
+
+        }
+
+      }
+
+
+
+    }
+  }
+
+  //.right{
+  //
+  //  margin-left: 1%;
+  //  width: 48%;
+  //  height: 400px;
+  //  background-color: red;
+  //  margin-right: 1%;
+  //}
+  //
+
+
+}
+
+  .logo{
+    margin-top: 20px;
+
+    img{
+
+      width: 140%;
+    }
+  }
+
+
+
+  .imgbox{
+
+    margin-bottom: 2px;
+
+  }
+
+  .active{
+
+    width: 100%;
+    height:auto;
+    //background-color: yellow;
+    display: flex;
+
+
+    .left{
+
+      width: 49%;
+      margin-right: 1%;
+      height: auto;
+      //background-color: darkorange;
+      padding: 4px;
+
+      .b1 {
+
+        box-shadow: 0px 0.8px 12px 0.2px gray;
+        background-color: white;
+        padding-bottom: 8px;
+        margin-bottom: 6px;
+
+        .content {
+
+          width: 100%;
+          padding: 8px;
+          font-size: 18px;
+          //height: 100px;
+          background-color: white;;
+
+        }
+
+        .foot {
+          width: 100%;
+          height: 30px;
+          //background-color: grey;
+
+          img {
+            width: 30px;
+            height: 30px;
+            position: relative;
+            left: 100%;
+            margin-left: -40px;
+          }
+
+        }
+
+      }
+
+
+
+
+
+
+    }
+
+
+  }
+
+}

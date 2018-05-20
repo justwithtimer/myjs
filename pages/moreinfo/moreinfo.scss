@@ -1,0 +1,198 @@
+page-moreinfo {
+
+
+
+  .header-ios .toolbar-ios:last-child .toolbar-background-ios{
+
+
+    border: none;
+  }
+  .userinfo{
+
+
+    img{
+
+      width: 80px;
+      height: 80px;
+
+
+    }
+
+  }
+  .input-wrapper{
+
+    padding-left: 20px;
+  }
+
+  .username{
+
+    padding-left: 12%;
+    padding-right: 12%;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    p{
+    width: 50%;
+      margin-top: 8px;
+      margin-bottom: 0px;
+    }
+
+    .friendstatus{
+
+      width: 50%;
+      img{
+        width: 30px;
+        height: 30px;
+        margin-left: 74%;
+      }
+
+
+    }
+  }
+
+  .item-ios{
+
+  padding-left: 10%;
+
+  }
+
+  .list-ios{
+
+   padding-bottom: 10px!important;
+    margin-bottom: 0px!important;
+  }
+.info{
+  width: 100%;
+  height: 60px;
+  background-color: rgb(228,226,227);
+  display: flex;
+  ion-label{
+
+    font-size: 15px;
+  }
+
+  .b1{
+
+    width: 33.3%;
+    height: 100%;
+    //background-color: #488aff;
+  }
+  .b2{
+    width: 33.4%;
+    height: 100%;
+    //background-color: #999999;
+  }
+  .b3{
+    width: 33.3%;
+    height: 100%;
+    //background-color: #FFB6C1;
+  }
+
+}
+
+
+
+  .SwipedTabs-indicatorSegment
+  {
+    -webkit-transition: 0.3s all;
+    -moz-transition:  0.3s all;
+    -o-transition:  0.3s all;
+    transition:  0.3s all;
+    transform-origin: top 0 left 0;
+    height: 3px;
+    position: relative;
+    top: -2px;
+    background-color: yellow !important;
+  }
+  .SwipedTabs-tabs ion-segment-button
+  {
+    border:none !important;
+    color:gray!important;
+    background-color:black!important;
+  }
+  .SwipedTabs-tabs ion-segment-button.SwipedTabs-activeTab
+  {
+    color:white !important;
+  }
+  .SwipedTabs-tabs
+  {
+    border-bottom: solid 1px black  !important;
+  }
+  .segment-ios .segment-button:first-of-type{
+
+    border-radius: 0px;
+  }
+  .segment-ios .segment-button:last-of-type{
+
+    border-radius: 0px;
+  }
+
+  .list-ios > .item-block:first-child{
+
+    background-color: rgb(237,234,235);
+  }
+
+  .photobox{
+
+    width: 100%;
+    height: 120px;
+    display: flex;
+
+    img{
+
+      width: 33.3%;
+      height: 100%;
+      padding: 1px;
+    }
+    .center{
+
+     width: 33.4%;
+      height: 100%;
+
+    }
+
+
+
+  }
+
+  .swiper-slide{
+
+    display: block;
+    overflow: scroll;
+  }
+
+  .userlove{
+
+    ion-card-header {
+      display: flex;
+      ion-label{
+        margin-left: 8px;
+       text-align: left;
+        width: 30%;
+      }
+      img {
+
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+
+      }
+    }
+
+    .boxcontent{
+
+      width: 100%;
+      height: auto;
+
+    }
+
+
+  }
+
+  .item-md{
+
+    background-color: rgb(237,234,235) ;
+  }
+
+
+}

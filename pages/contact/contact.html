@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="classfy">
+    <div class="box1" >
+
+      <div class="select1">
+        <img src="assets/ui/playground.png">
+        <ion-label>广场</ion-label>
+      </div>
+      <div class="select2">
+        <img src="assets/ui/loser.png">
+        <ion-label>失物</ion-label>
+      </div>
+
+    </div>
+
+    <div class="box1">
+
+      <div class="select1">
+        <img src="assets/ui/collection.png" style="margin-top: 15px;margin-left: 5px">
+        <ion-label>收藏</ion-label>
+      </div>
+      <div class="select2">
+        <img src="assets/ui/plan.png" style="margin-left: 5px">
+        <ion-label>日程</ion-label>
+      </div>
+  </div>
+  </div>
+
+  <ion-card style="margin-bottom: 10px!important;">
+    <ion-card-header>
+      <div class="mycardtitle">
+
+        <img src="assets/ui/world.png">
+        <ion-label>最 近</ion-label>
+      </div>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-slides style="height: 200px" class="postersliders"slidesPerView="1.2" parallax="true" zoom="true">
+        <ion-slide>
+          <div class="myposter" >
+            <img src="assets/poster/poster1.jpg">
+            <div class="card-title">照 片</div>
+            <div class="card-subtitle">this is world</div>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="myposter" style="padding-right: 20px">
+            <img src="assets/poster/poster2.jpg">
+            <div class="card-title">运 动</div>
+            <div class="card-subtitle">this is world</div>
+          </div>
+        </ion-slide>
+
+        <ion-slide>
+          <div class="myposter" style="padding-right: 20px">
+            <img src="assets/poster/poster3.jpg">
+            <div class="card-title">表 白</div>
+            <div class="card-subtitle">this is world</div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <ion-card>
+    <ion-card-header>
+      <div class="mycardtitle">
+        <img src="assets/ui/loveblank.png">
+        <ion-label style="color: palevioletred">活 动</ion-label>
+      </div>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-slides style="height: 200px" class="postersliders" [pager]="true" slidesPerView="1" parallax="true" zoom="true" class="paper" [loop]="true">
+        <ion-slide>
+          <div class="posterbox">
+            <img src="assets/poster/paper4.jpg" >
+            <div class="card-title">这周谁是主角</div>
+            <div class="card-subtitle">this is world</div>
+          </div>
+        </ion-slide>
+
+        <ion-slide>
+          <div class="posterbox">
+            <img src="assets/poster/paper5.jpg" >
+            <div class="card-title">一座城市</div>
+            <div class="card-subtitle">this is world</div>
+          </div>
+        </ion-slide>
+
+        <ion-slide>
+          <div class="posterbox">
+            <img src="assets/poster/paper7.jpg">
+            <div class="card-title">好书共读</div>
+            <div class="card-subtitle">this is world</div>
+          </div>
+        </ion-slide>
+
+      </ion-slides>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

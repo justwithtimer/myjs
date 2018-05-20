@@ -1,0 +1,22 @@
+page-select-theme {
+
+
+  .themebox{
+
+    width: 100%;
+    height: 100px;
+    background-color: yellowgreen;
+  }
+  .cardbox{
+
+    border-radius: 10px;
+    animation: myaction 0.8s ease-in;
+  }
+
+  @keyframes myaction {
+
+    from {width: 0px;}
+    to {width: 100%}
+  }
+
+}

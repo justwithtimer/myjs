@@ -1,0 +1,329 @@
+<ion-header >
+
+  <ion-navbar [hideBackButton]="true" style="background-image: url('assets/poster/bgs.png');">
+    <!--<img src="assets/newUI/back2.png">-->
+
+    <div style="display: flex" >
+      <div style="padding: 5px;width: 14%">
+        <!--<img class="back" src="assets/newUI/back3.png" style="width: 32px;height: 32px" (click)="back()">-->
+      </div>
+      <div style="width: 72%">
+        <!--<ion-label *ngIf="!flag">失物招领</ion-label>-->
+
+          <ion-label text-center style="color: gold;font-size: 18px;margin-right: 0px!important;" >好友</ion-label>
+      </div>
+      <div style="padding: 5px;width: 14%" class="btnsearch" (click)="toggleSearch()">
+        <!--<img src="assets/newUI/search2.png">-->
+      </div>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+
+  <ion-fab  bottom right edge style="margin-bottom: 24px">
+    <button ion-fab mini (click)="addfriends()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
+  <ion-list *ngFor="let item of friendsList">
+    <ion-item-sliding>
+      <button ion-item detail-none (click)="gotoChat(item.phone)">
+        <ion-thumbnail item-start>
+          <img src="{{item.userHeadface}}">
+        </ion-thumbnail>
+        <h2>{{item.nickname}}</h2>
+        <p></p>
+      </button>
+      <ion-item-options side="left" >
+        <button ion-button color="more" (click)="goMoreinfo(item.phone)">
+          <ion-label style="color: white!important;">更多</ion-label>
+        </button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button color="canceltop">
+          置 顶
+        </button>
+        <button ion-button color="madetop">
+          标记为已读
+        </button>
+
+        <button ion-button color="danger">
+          删除
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <!--<ion-item-sliding>-->
+      <!--<button ion-item detail-none  (click)="gotoChat('user2','user1')">-->
+        <!--<ion-thumbnail item-start>-->
+          <!--<img src="assets/userface/user2.jpg">-->
+        <!--</ion-thumbnail>-->
+        <!--<h2>My Neighbor Totoro</h2>-->
+        <!--<p>Hayao Miyazaki • 1988</p>-->
+      <!--</button>-->
+      <!--<ion-item-options side="left" >-->
+        <!--<button ion-button color="more">-->
+          <!--<ion-label style="color: white!important;">更多</ion-label>-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+      <!--<ion-item-options side="right">-->
+        <!--<button ion-button color="canceltop">-->
+          <!--置 顶-->
+        <!--</button>-->
+        <!--<button ion-button color="madetop">-->
+          <!--标记为已读-->
+        <!--</button>-->
+
+        <!--<button ion-button color="danger">-->
+          <!--删除-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+    <!--</ion-item-sliding>-->
+
+
+    <!--<ion-item-sliding>-->
+      <!--<button ion-item detail-none (click)="gotoChat('user3','user4')">-->
+        <!--<ion-thumbnail item-start>-->
+          <!--<img src="assets/userface/user3.jpg">-->
+        <!--</ion-thumbnail>-->
+        <!--<h2>My Neighbor Totoro</h2>-->
+        <!--<p>Hayao Miyazaki • 1988</p>-->
+      <!--</button>-->
+      <!--<ion-item-options side="left" >-->
+        <!--<button ion-button color="more">-->
+          <!--<ion-label style="color: white!important;">更多</ion-label>-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+      <!--<ion-item-options side="right">-->
+        <!--<button ion-button color="canceltop">-->
+          <!--置 顶-->
+        <!--</button>-->
+        <!--<button ion-button color="madetop">-->
+          <!--标记为已读-->
+        <!--</button>-->
+
+        <!--<button ion-button color="danger">-->
+          <!--删除-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+    <!--</ion-item-sliding>-->
+<!--&lt;!&ndash;4&ndash;&gt;-->
+    <!--<ion-item-sliding>-->
+      <!--<button ion-item detail-none (click)="gotoChat('user4','user3')">-->
+        <!--<ion-thumbnail item-start>-->
+          <!--<img src="assets/userface/user4.jpg">-->
+        <!--</ion-thumbnail>-->
+        <!--<h2>My Neighbor Totoro</h2>-->
+        <!--<p>Hayao Miyazaki • 1988</p>-->
+      <!--</button>-->
+      <!--<ion-item-options side="left" >-->
+        <!--<button ion-button color="more">-->
+          <!--<ion-label style="color: white!important;">更多</ion-label>-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+      <!--<ion-item-options side="right">-->
+        <!--<button ion-button color="canceltop">-->
+          <!--置 顶-->
+        <!--</button>-->
+        <!--<button ion-button color="madetop">-->
+          <!--标记为已读-->
+        <!--</button>-->
+
+        <!--<button ion-button color="danger">-->
+          <!--删除-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+    <!--</ion-item-sliding>-->
+<!--&lt;!&ndash;5&ndash;&gt;-->
+    <!--<ion-item-sliding>-->
+      <!--<button ion-item detail-none>-->
+        <!--<ion-thumbnail item-start>-->
+          <!--<img src="assets/userface/user5.jpg">-->
+        <!--</ion-thumbnail>-->
+        <!--<h2>My Neighbor Totoro</h2>-->
+        <!--<p>Hayao Miyazaki • 1988</p>-->
+      <!--</button>-->
+      <!--<ion-item-options side="left" >-->
+        <!--<button ion-button color="more">-->
+          <!--<ion-label style="color: white!important;">更多</ion-label>-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+      <!--<ion-item-options side="right">-->
+        <!--<button ion-button color="canceltop">-->
+          <!--置 顶-->
+        <!--</button>-->
+        <!--<button ion-button color="madetop">-->
+          <!--标记为已读-->
+        <!--</button>-->
+
+        <!--<button ion-button color="danger">-->
+          <!--删除-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+    <!--</ion-item-sliding>-->
+    <!--&lt;!&ndash;6&ndash;&gt;-->
+    <!--<ion-item-sliding>-->
+      <!--<button ion-item detail-none>-->
+        <!--<ion-thumbnail item-start>-->
+          <!--<img src="assets/userface/user6.jpg">-->
+        <!--</ion-thumbnail>-->
+        <!--<h2>My Neighbor Totoro</h2>-->
+        <!--<p>Hayao Miyazaki • 1988</p>-->
+      <!--</button>-->
+      <!--<ion-item-options side="left" >-->
+        <!--<button ion-button color="more">-->
+          <!--<ion-label style="color: white!important;">更多</ion-label>-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+      <!--<ion-item-options side="right">-->
+        <!--<button ion-button color="canceltop">-->
+          <!--置 顶-->
+        <!--</button>-->
+        <!--<button ion-button color="madetop">-->
+          <!--标记为已读-->
+        <!--</button>-->
+
+        <!--<button ion-button color="danger">-->
+          <!--删除-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+    <!--</ion-item-sliding>-->
+    <!--&lt;!&ndash;7&ndash;&gt;-->
+    <!--<ion-item-sliding>-->
+      <!--<button ion-item detail-none>-->
+        <!--<ion-thumbnail item-start>-->
+          <!--<img src="assets/userface/user7.jpg">-->
+        <!--</ion-thumbnail>-->
+        <!--<h2>My Neighbor Totoro</h2>-->
+        <!--<p>Hayao Miyazaki • 1988</p>-->
+      <!--</button>-->
+      <!--<ion-item-options side="left" >-->
+        <!--<button ion-button color="more">-->
+          <!--<ion-label style="color: white!important;">更多</ion-label>-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+      <!--<ion-item-options side="right">-->
+        <!--<button ion-button color="canceltop">-->
+          <!--置 顶-->
+        <!--</button>-->
+        <!--<button ion-button color="madetop">-->
+          <!--标记为已读-->
+        <!--</button>-->
+
+        <!--<button ion-button color="danger">-->
+          <!--删除-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+    <!--</ion-item-sliding>-->
+    <!--&lt;!&ndash;8&ndash;&gt;-->
+
+    <!--<ion-item-sliding>-->
+      <!--<button ion-item detail-none>-->
+        <!--<ion-thumbnail item-start>-->
+          <!--<img src="assets/userface/user8.jpg">-->
+        <!--</ion-thumbnail>-->
+        <!--<h2>My Neighbor Totoro</h2>-->
+        <!--<p>Hayao Miyazaki • 1988</p>-->
+      <!--</button>-->
+      <!--<ion-item-options side="left" >-->
+        <!--<button ion-button color="more">-->
+          <!--<ion-label style="color: white!important;">更多</ion-label>-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+      <!--<ion-item-options side="right">-->
+        <!--<button ion-button color="canceltop">-->
+          <!--置 顶-->
+        <!--</button>-->
+        <!--<button ion-button color="madetop">-->
+          <!--标记为已读-->
+        <!--</button>-->
+
+        <!--<button ion-button color="danger">-->
+          <!--删除-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+    <!--</ion-item-sliding>-->
+
+    <!--&lt;!&ndash;9&ndash;&gt;-->
+    <!--<ion-item-sliding>-->
+      <!--<button ion-item detail-none>-->
+        <!--<ion-thumbnail item-start>-->
+          <!--<img src="assets/userface/user9.jpg">-->
+        <!--</ion-thumbnail>-->
+        <!--<h2>My Neighbor Totoro</h2>-->
+        <!--<p>Hayao Miyazaki • 1988</p>-->
+      <!--</button>-->
+      <!--<ion-item-options side="left" >-->
+        <!--<button ion-button color="more">-->
+          <!--<ion-label style="color: white!important;">更多</ion-label>-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+      <!--<ion-item-options side="right">-->
+        <!--<button ion-button color="canceltop">-->
+          <!--置 顶-->
+        <!--</button>-->
+        <!--<button ion-button color="madetop">-->
+          <!--标记为已读-->
+        <!--</button>-->
+
+        <!--<button ion-button color="danger">-->
+          <!--删除-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+    <!--</ion-item-sliding>-->
+    <!--&lt;!&ndash;10&ndash;&gt;-->
+    <!--<ion-item-sliding>-->
+      <!--<button ion-item detail-none>-->
+        <!--<ion-thumbnail item-start>-->
+          <!--<img src="assets/userface/user10.jpg">-->
+        <!--</ion-thumbnail>-->
+        <!--<h2>My Neighbor Totoro</h2>-->
+        <!--<p>Hayao Miyazaki • 1988</p>-->
+      <!--</button>-->
+      <!--<ion-item-options side="left" >-->
+        <!--<button ion-button color="more">-->
+          <!--<ion-label style="color: white!important;">更多</ion-label>-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+      <!--<ion-item-options side="right">-->
+        <!--<button ion-button color="canceltop">-->
+          <!--置 顶-->
+        <!--</button>-->
+        <!--<button ion-button color="madetop">-->
+          <!--标记为已读-->
+        <!--</button>-->
+
+        <!--<button ion-button color="danger">-->
+          <!--删除-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+    <!--</ion-item-sliding>-->
+    <!--&lt;!&ndash;11&ndash;&gt;-->
+    <!--<ion-item-sliding>-->
+      <!--<button ion-item detail-none>-->
+        <!--<ion-thumbnail item-start>-->
+          <!--<img src="assets/userface/user11.jpg">-->
+        <!--</ion-thumbnail>-->
+        <!--<h2>My Neighbor Totoro</h2>-->
+        <!--<p>Hayao Miyazaki • 1988</p>-->
+      <!--</button>-->
+      <!--<ion-item-options side="left" >-->
+        <!--<button ion-button color="more">-->
+          <!--<ion-label style="color: white!important;">更多</ion-label>-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+      <!--<ion-item-options side="right">-->
+        <!--<button ion-button color="canceltop">-->
+          <!--置 顶-->
+        <!--</button>-->
+        <!--<button ion-button color="madetop">-->
+          <!--标记为已读-->
+        <!--</button>-->
+
+        <!--<button ion-button color="danger">-->
+          <!--删除-->
+        <!--</button>-->
+      <!--</ion-item-options>-->
+    <!--</ion-item-sliding>-->
+  </ion-list>
+</ion-content>

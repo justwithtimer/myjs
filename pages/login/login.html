@@ -1,0 +1,34 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content *ngIf="flag" style="background-image: url('assets/newUI/dengl.png');background-repeat: no-repeat;background-size: 100% 100%">
+
+  <!--<img class="bg" src="assets/newUI/dengl.png" style="position: absolute;z-index: -1;width: 100%;height: 100%">-->
+
+  <div class="logininfo">
+
+    <ion-item  >
+      <img src="assets/newUI/phone.png" item-left>
+      <ion-input placeholder="请输入手机号" item-right [(ngModel)]="phonenum"></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <img src="assets/newUI/lock.png" item-left>
+      <ion-input placeholder="请输入密码" item-right  type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="select" >
+    <ion-label style="text-align: left">
+      忘记密码?
+    </ion-label>
+    <ion-label style="text-align: right;margin-right: 0px!important;" (click)="gotoReg()">
+      注册
+    </ion-label>
+  </div>
+
+  <button ion-button style="position: relative;width: 40%;left: 50%;margin-left: -20%;" [outline]="true" color="dark" (click)="doLogin()">登 录</button>
+</ion-content>

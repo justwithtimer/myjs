@@ -1,0 +1,118 @@
+<!--
+  Generated template for the NoticePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+
+  <ion-navbar [hideBackButton]="true" style="background-image: url('assets/poster/bgs.png');">
+    <!--<img src="assets/newUI/back2.png">-->
+
+    <div style="display: flex" >
+      <div style="padding: 5px;width: 14%">
+        <img class="back" src="assets/newUI/back3.png" style="width: 32px;height: 32px" (click)="back()">
+      </div>
+      <div style="width: 72%">
+      <ion-label text-center style="color: gold;font-size: 18px;margin-right: 0px!important;">通知</ion-label>
+      </div>
+      <div style="padding: 5px;width: 14%" class="btnsearch">
+        <!--<img src="assets/newUI/closeme.png" (click)="closeIt()">-->
+      </div>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+
+
+  <div padding>
+    <ion-segment [(ngModel)]="notictype">
+      <ion-segment-button value="commentnotice">
+        收到评论
+      </ion-segment-button>
+      <ion-segment-button value="friendnotice">
+        好友通知
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="notictype">
+
+
+
+    <div *ngSwitchCase=" 'commentnotice'">
+
+      <div *ngFor="let item of comments">
+      <ion-card style="padding-bottom: 8px">
+        <div class="box1">
+          <div class="headerface">
+            <img src="{{item.userHeadface}}">
+          </div>
+
+          <div class="mycontent">
+            <div class="cb1">
+              <ion-label>&nbsp; {{item.nickname}} &nbsp; 评论了你</ion-label>
+            </div>
+            <div class="cb2">
+              <ion-label> &nbsp;:{{item.date}}</ion-label>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="width: 90%;margin-left: 5%;padding: 8px;font-size: 18px;">
+          {{item.contents}}
+        </div>
+
+        <div class="pub">
+            {{pubcontent}}
+        </div>
+      </ion-card>
+     </div>
+
+    </div>
+
+
+    <div *ngSwitchCase=" 'friendnotice'">
+
+
+      <div *ngFor="let item of friends">
+      <ion-card>
+        <div class="box">
+          <div class="headerface">
+            <img src="{{item.userHeadface}}">
+          </div>
+
+          <div class="mycontent">
+            <div class="cb1">
+              <ion-label>&nbsp;{{item.nickname}}请求添加好友</ion-label>
+            </div>
+            <div class="cb2">
+              <ion-label> {{item.content}}</ion-label>
+            </div>
+
+          </div>
+
+          <div class="menu">
+            <button ion-button [round]="true" style="width: 60px;height: 40px" (click)="Acceptit(item._id,item.phone)">同意</button>
+          </div>
+        </div>
+      </ion-card>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+</ion-content>

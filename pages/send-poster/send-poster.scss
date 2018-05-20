@@ -1,0 +1,119 @@
+page-send-poster {
+
+
+
+  .SwipedTabs-indicatorSegment
+  {
+    -webkit-transition: 0.3s all;
+    -moz-transition:  0.3s all;
+    -o-transition:  0.3s all;
+    transition:  0.3s all;
+    transform-origin: top 0 left 0;
+    height: 3px;
+    position: relative;
+    top: -2px;
+    background-color: yellow !important;
+  }
+  .SwipedTabs-tabs ion-segment-button
+  {
+    border:none !important;
+    color:gray!important;
+    //background-color:black!important;
+  }
+  .SwipedTabs-tabs ion-segment-button.SwipedTabs-activeTab
+  {
+    color:black !important;
+  }
+  .SwipedTabs-tabs
+  {
+    border-bottom: solid 1px black  !important;
+  }
+  .segment-ios .segment-button:first-of-type{
+
+    border-radius: 0px;
+  }
+  .segment-ios .segment-button:last-of-type{
+
+    border-radius: 0px;
+  }
+
+
+  .swiper-slide{
+
+    display: block;
+    overflow: scroll;
+  }
+
+
+
+
+  .commentcontent {
+
+    ion-card-header {
+
+      display: flex;
+      img {
+
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+      }
+
+
+      .div {
+        //background-color:red;
+        height: 40px;
+        width: 200px;
+        margin-left: 10px;
+
+        .d1 {
+
+          //background-color: #32db64;
+          width: 100%;
+          height: 60%;
+          font-size: 20px;
+          text-align: left;
+          margin-top: 10px;
+        }
+
+        .d2 {
+
+          //background-color: gold;
+          width: 100%;
+          height: 40%;
+          font-size: 12px;
+          color: gray;
+          text-align: left;
+
+        }
+
+      }
+
+    }
+
+    .foot{
+
+      width: 100%;
+      height: 50px;
+      background-color: yellowgreen;
+
+    }
+  }
+  .card-header-md{
+
+    padding-bottom: 5px!important;
+  }
+
+
+  ion-card-content{
+    font-size:20px ;
+    text-align: left;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+
+
+
+
+}

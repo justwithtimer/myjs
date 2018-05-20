@@ -1,0 +1,73 @@
+<!--
+  Generated template for the ChatwithPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+<ion-navbar [hideBackButton]="true" style="background-image: url('assets/poster/bgs.png');">
+  <!--<img src="assets/newUI/back2.png">-->
+
+  <div style="display: flex" >
+    <div style="padding: 5px;width: 14%">
+      <img class="back" src="assets/newUI/back3.png" style="width: 32px;height: 32px" (click)="back()">
+    </div>
+    <div style="width: 72%">
+      <!--<ion-label *ngIf="!flag">失物招领</ion-label>-->
+
+      <ion-label text-center style="color: gold;font-size: 18px;margin-right: 0px!important;" >Chat</ion-label>
+    </div>
+    <div style="padding: 5px;width: 14%" class="btnsearch" (click)="toggleSearch()">
+      <!--<img src="assets/newUI/search2.png">-->
+    </div>
+  </div>
+</ion-navbar>
+</ion-header>
+
+
+<ion-content padding style="background-color: rgb(237,234,235)">
+
+  <!--<div class="mesgboxfriend clearfix">-->
+    <!--<img src="assets/userface/user1.jpg">-->
+    <!--<div class="msg">-->
+      <!--thi-->
+    <!--</div>-->
+
+  <!--</div>-->
+  <div   *ngFor="let item of messages"  [ngClass]=" item.from==userfrom? 'mesgboxme clearfix' :'mesgboxfriend clearfix'">
+    <img [src]="item.from==userfrom? myheaderface:friendface">
+    <div class="msg">
+       {{item.text}}
+    </div>
+
+  </div>
+</ion-content>
+
+<ion-footer  class="footbox"  no-border [style.height]="isOpenEmojiPicker? '255px': '55px'">
+
+
+  <div class="select">
+
+    <div class="emoji">
+      <button icon-only ion-button [clear]="true" (click)="switchEmojiPicker()">
+        <ion-icon name="ios-happy-outline"></ion-icon>
+      </button>
+    </div>
+    <div class="msg">
+      <ion-textarea
+        #chatInput
+        placeholder=""
+        [(ngModel)]="message"
+        (keyup.enter)="sendMessage()"
+        (focus)="focus()"
+      ></ion-textarea>
+    </div>
+    <div class="add">
+      <button icon-only ion-button [clear]="true" (click)="sendMessage()">
+        <ion-icon name="md-paper-plane"></ion-icon>
+      </button>
+    </div>
+  </div>
+  <emojipicker  [(ngModel)]="message"></emojipicker>
+</ion-footer>
+

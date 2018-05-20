@@ -1,0 +1,32 @@
+page-setting {
+  .list-ios .item-block .item-inner{
+    border-bottom: 0px !important;
+  }
+
+  .item-ios{
+
+    border-bottom: 0.5px rgba(125,125,125,0.5) solid!important;
+  }
+
+
+  ion-header{
+
+    background-color: black;
+
+    img:last-child{
+      width: 32px;
+      height: 32px;
+      position: relative;
+      left: 50%;
+      margin-left: -16px;
+
+
+    }
+  }
+
+  .toolbar-background-md{
+
+    background-color: rgba(0,0,0,0);
+
+  }
+}

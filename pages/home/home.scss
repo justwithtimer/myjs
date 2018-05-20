@@ -1,0 +1,49 @@
+page-home {
+
+  .list-md ion-item-sliding{
+
+    border-bottom: 1px solid rgba(125,125,125,0.4);
+
+
+  }
+
+  .list-md .item-block .item-inner{
+
+
+    border-bottom: 0px!important;
+  }
+
+  ion-input, ion-textarea{
+
+    width: 100%;
+    position: relative;
+
+    color: white!important;
+
+
+  }
+
+
+  ion-header{
+
+    background-color: black;
+
+    img:last-child{
+      width: 32px;
+      height: 32px;
+      position: relative;
+      left: 50%;
+      margin-left: -16px;
+
+
+    }
+  }
+
+  .toolbar-background-md{
+
+    background-color: rgba(0,0,0,0);
+
+  }
+
+
+}

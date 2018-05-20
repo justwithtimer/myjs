@@ -1,0 +1,34 @@
+
+<ion-card>
+  <ion-card-header (click)="toggleAction()">
+    <div class="mycc">
+    </div>
+    <ion-label class="title">
+      {{titlebb}}
+      <ion-label style="text-align: right;margin: 0px;position: relative;left: 0%;font-size: 16px">
+       {{mytitle.createdtime}}
+
+      </ion-label>
+    </ion-label>
+
+  </ion-card-header >
+  <ion-card-content class="mybox" #box>
+    <div #content class="contentbox">
+      <div style="max-height: 200px;overflow: scroll">
+      <img  *ngIf="mytitle.imgurl!=''" src="{{mytitle.imgurl}}" imageViewer="true">
+      </div>
+      <div style="font-size: 18px">
+     {{mytitle.content}}
+      </div>
+      <div >
+        <ion-textarea placeholder="说点什么吧" style="border: 0.5px solid gainsboro;border-radius: 8px;margin-top: 5px;"[(ngModel)]="comment">
+        </ion-textarea>
+      </div>
+      <div>
+        <button ion-button [round]="true"  (click)="goComment()" style="width: 80px;position: relative;left: 50%;margin-left: -40px;">发 送</button>
+      </div>
+    </div>
+  </ion-card-content>
+
+</ion-card>
+
